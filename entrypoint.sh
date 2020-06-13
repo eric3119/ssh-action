@@ -16,7 +16,9 @@ then
   touch "$SSHPATH/known_hosts"
 fi
 
+echo key_begin
 echo "$INPUT_KEY"
+echo key_end
 echo "$INPUT_KEY" > "$SSHPATH/deploy_key"
 chmod 700 "$SSHPATH"
 chmod 600 "$SSHPATH/known_hosts"
